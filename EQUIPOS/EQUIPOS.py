@@ -122,9 +122,17 @@ equipos:{
                  "Nacionalidad":"Colombia",
                  "Club Actual":"Galatasaray"
                    }
+        },
+        "Seleccion colombiana":{
+            "Nombre oficial":"Federación Colombiana de Fútbol",
+            "Dirección":"Carrera 45 A No. 94-06/Bogotá",
+            "Telefono":"+57 1 5185501",
+            "Pagina web":"https://fcf.com.co/",
+            "Fundacion":"12/10/1924"
         }
+      
 
-    }
+    },
     "uru":{
         "jugadores":{
             9:{"Nombre":"Darwin",
@@ -260,5 +268,17 @@ equipos:{
                  "Club Actual":"Junior de barranquilla"
                    }
 
+    },
+    "Seleccion Uruguaya":{
+            "Nombre oficial":"Asociación Uruguaya de Fútbol",
+            "Dirección":"Guayabo 1531 Montevideo/Uruguay",
+            "Telefono":"+59 82 4004814",
+            "Pagina web":"https://fcf.com.co/",
+            "Fundacion":"	auf.org.uy",
+        }
+
+
+        
     }
+    
 }

@@ -280,12 +280,17 @@ datos={
 }
 }
 }
-op=int(input("Digite 1 si quiere ver la informacion de la seleccion de  colombia\nDigite 2 si quiere ver la infromacion de la seleccion de uruguay\n"))
-if op==1:
-  print("Jugadores colombia")
-  print(json.dumps(datos["equipos"]["col"], sort_keys=False,indent=4))
-elif op==2:
-  print("Jugadores Uruguay")
-  print(json.dumps(datos["equipos"]["auf"],sort_keys=False,indent=4))
-else:
-  print("Error")
+while True:
+    op = int(input("Digite 1 para ver la información de la selección de Colombia\n 2 para ver la información de la selección de Uruguay\n Digite 0 para salir:\n"))
+
+    if op == 1:
+        print("Jugadores Colombia")
+        print(json.dumps(datos["equipos"]["col"], sort_keys=False, indent=4))
+    elif op == 2:
+        print("Jugadores Uruguay")
+        print(json.dumps(datos["equipos"]["auf"], sort_keys=False, indent=4))
+    elif op == 0:
+        print("Acabas de salir del programa.")
+        break
+    else:
+        print("Error: Opción no válida")

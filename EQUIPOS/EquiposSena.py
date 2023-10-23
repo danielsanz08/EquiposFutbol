@@ -1,4 +1,5 @@
 #diccionario de equipos
+import json
 datos={
 "equipos":{
     "col":{
@@ -11,7 +12,7 @@ datos={
             "Jugadores":{
                 10:{"Nombre":"James",
                 "Apellido":"Rodriguez",
-                "Lugar de nacimiento":"Cúcuta",
+                "Lugar de nacimiento":"Cucuta",
                 "Fecha de nacimiento":"12/07/1991",
                 "Edad":"32",
                 "Posicion": "Medio campo - Medio centro",
@@ -22,7 +23,7 @@ datos={
                   },
                 4:{"Nombre":"Santiago",
                 "Apellido":"Arias",
-                "Lugar de nacimiento":"Medellín",
+                "Lugar de nacimiento":"Medellin",
                 "Fecha de nacimiento":"13/01/1992",
                 "Edad":"31",
                 "Posicion": "Defensa lateral derecho",
@@ -33,7 +34,7 @@ datos={
                   },
                 18:{"Nombre":"Frank",
                 "Apellido":"Fabra",
-                "Lugar de nacimiento":"Nechí",
+                "Lugar de nacimiento":"Nechi",
                 "Fecha de nacimiento":"22/02/1991",
                 "Edad":"32",
                 "Posicion": "Defensa lateral izquierdo",
@@ -44,7 +45,7 @@ datos={
                   },
                 12:{"Nombre":"Camilo",
                 "Apellido":"Vargas",
-                "Lugar de nacimiento":"Bogotá",
+                "Lugar de nacimiento":"Bogota",
                 "Fecha de nacimiento":"09/03/1989",
                 "Edad":"34",
                 "Posicion": "Portero",
@@ -55,7 +56,7 @@ datos={
                   },
                 2:{"Nombre":"Carlos",
                 "Apellido":"Cuesta",
-                "Lugar de nacimiento":"Medellín",
+                "Lugar de nacimiento":"Medellin",
                 "Fecha de nacimiento":"09/03/1999",
                 "Edad":"24",
                 "Posicion": "Defensa central",
@@ -77,7 +78,7 @@ datos={
                   },
                 15:{"Nombre":"Mateus",
                 "Apellido":"Uribe",
-                "Lugar de nacimiento":"Medellín",
+                "Lugar de nacimiento":"Medellin",
                 "Fecha de nacimiento":"21/03/1991",
                 "Edad":"32",
                 "Posicion": "Medio campo-Pivote",
@@ -99,7 +100,7 @@ datos={
                   },
                 11:{"Nombre":"Jhon",
                 "Apellido":"Arias",
-                "Lugar de nacimiento":"Quibdó",
+                "Lugar de nacimiento":"Quibdo",
                 "Fecha de nacimiento":"21/09/1997",
                 "Edad":"26",
                 "Posicion": "_Medio campo - Interior izquierdo",
@@ -279,8 +280,12 @@ datos={
 }
 }
 }
-# Imprimir lo que hay en "col"
-print("\n\nContenido de 'col':\n", datos["equipos"]["col"])
-
-# Imprimir lo que hay en "auf"
-print("\n\nContenido de 'auf':\n", datos["equipos"]["auf"])
+op=int(input("Digite 1 si quiere ver la informacion de la seleccion de  colombia\nDigite 2 si quiere ver la infromacion de la seleccion de uruguay\n"))
+if op==1:
+  print("Jugadores colombia")
+  print(json.dumps(datos["equipos"]["col"], sort_keys=False,indent=4))
+elif op==2:
+  print("Jugadores Uruguay")
+  print(json.dumps(datos["equipos"]["auf"],sort_keys=False,indent=4))
+else:
+  print("Error")
